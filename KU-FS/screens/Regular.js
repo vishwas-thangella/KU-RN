@@ -20,7 +20,7 @@ const Regular = ({navigation})=>{
             {
                 syllabus ? syllabus.map(item=>{
                     return(
-                        <ListItem title={item.name} trailing={item.link ? <FontAwesome5 name="file-pdf" size={24} color="red"/> : ''} key={item.name} onPress={async ()=>{
+                        <ListItem title={item.name} trailing={item.link ? <FontAwesome5 name="file-pdf" size={24} color="red"/> : ''} key={(item.name+item.link)} onPress={async ()=>{
                             // OpenAnyThing.Pdf(item.link);
                             await AsyncStorage.setItem('link',JSON.stringify(item.link));
                             navigation.navigate('pdfread');

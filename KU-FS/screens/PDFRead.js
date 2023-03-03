@@ -15,7 +15,7 @@ const PDFRead = () =>{
     }
     React.useEffect(()=>{
         FetchPDF();
-        console.log(pdf)
+        // console.log(pdf)
     },[]);
     return(
         <>

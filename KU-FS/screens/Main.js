@@ -17,6 +17,7 @@ import UG_REG_CB from "./UG_REG_CB";
 import Regular from "./Regular";
 import CBCS from "./CBCS";
 import PDFRead from "./PDFRead";
+import PGPrograms from "./PGPrograms";
 
 const Main = () => {
   const Stack = createNativeStackNavigator();
@@ -65,6 +66,7 @@ const Main = () => {
         {Auth && <Stack.Screen name="regular" component={Regular}/>}
         {Auth && <Stack.Screen name="cbcs" component={CBCS}/>}
         {Auth && <Stack.Screen name="pdfread" component={PDFRead}/>}
+        {Auth && <Stack.Screen name="pgprograms" component={PGPrograms}/>}
       </Stack.Navigator>
     </NavigationContainer>
   );
