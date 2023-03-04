@@ -10,7 +10,7 @@ const Register = ({navigation}) =>{
         Email:"",
         Password:"",
         Name:""
-      });
+    });
     const SubmitHandler =  () =>{
         axios.post(`${URL}/api/v1/users/add`,data).then(resp=>{
             Alert.alert('Mesage',resp.data.message,[{

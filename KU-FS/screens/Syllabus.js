@@ -14,9 +14,15 @@ const Syllabus = props =>{
             <ListItem leading={<Entypo name="graduation-cap" size={24} color="black" />} title="PG Programs" onPress={()=>{
                 props.navigation.navigate('pgprograms');
             }}/>
-            <ListItem leading={<Entypo name="graduation-cap" size={24} color="black" />} title="Engineering"/>
-            <ListItem leading={<Entypo name="graduation-cap" size={24} color="black" />} title="PHD"/>
-            <ListItem leading={<Entypo name="graduation-cap" size={24} color="black" />} title="LAW Courses"/>
+            <ListItem leading={<Entypo name="graduation-cap" size={24} color="black" />} title="Engineering" onPress={()=>{
+                props.navigation.navigate('Engineering');
+            }}/>
+            <ListItem leading={<Entypo name="graduation-cap" size={24} color="black" />} title="PHD" onPress={()=>{
+                props.navigation.navigate('phd');
+            }}/>
+            <ListItem leading={<Entypo name="graduation-cap" size={24} color="black" />} title="LAW Courses" onPress={()=>{
+                props.navigation.navigate('law');
+            }}/>
         </View>
     );
 }

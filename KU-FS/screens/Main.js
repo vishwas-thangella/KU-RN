@@ -18,6 +18,10 @@ import Regular from "./Regular";
 import CBCS from "./CBCS";
 import PDFRead from "./PDFRead";
 import PGPrograms from "./PGPrograms";
+import Engineering from "./Engineering";
+import Semesters from "./Semesters";
+import PHD from "./PHD";
+import Law from "./Law";
 
 const Main = () => {
   const Stack = createNativeStackNavigator();
@@ -67,6 +71,10 @@ const Main = () => {
         {Auth && <Stack.Screen name="cbcs" component={CBCS}/>}
         {Auth && <Stack.Screen name="pdfread" component={PDFRead}/>}
         {Auth && <Stack.Screen name="pgprograms" component={PGPrograms}/>}
+        {Auth && <Stack.Screen name="Engineering" component={Engineering}/>}
+        {Auth && <Stack.Screen name="semesters" component={Semesters}/>}
+        {Auth && <Stack.Screen name="phd" component={PHD}/>}
+        {Auth && <Stack.Screen name="law" component={Law}/>}
       </Stack.Navigator>
     </NavigationContainer>
   );
