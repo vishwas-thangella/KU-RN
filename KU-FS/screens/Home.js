@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StatusBar } from 'expo-status-bar';
 import { ListItem } from '@react-native-material/core';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
@@ -17,8 +17,11 @@ const MainHome = ({navigation}) =>{
             <StatusBar style='auto'/>
             <View>
                 <ListItem leading={<MaterialCommunityIcons name="timetable" size={24} color="orange" />} title="TimeTables" trailing={<MaterialIcons name="keyboard-arrow-right" size={24} color="black" />} onPress={()=>{navigation.navigate('TimeTables')}}/>
-                <ListItem leading={<Entypo name="clipboard" size={24} color="green" />} title="Exam Timetables" trailing={<MaterialIcons name="keyboard-arrow-right" size={24} color="black" />}/>
+                <ListItem leading={<Entypo name="graduation-cap" size={24} color="green" />} title="Placement Details" trailing={<MaterialIcons name="keyboard-arrow-right" size={24} color="black" />} onPress={()=>{navigation.navigate('placement')}}/>
                 <ListItem title='Syllabus' leading={<AntDesign name="book" size={24} color="magenta" />} trailing={<MaterialIcons name="keyboard-arrow-right" size={24} color="black"/>} onPress={()=>{navigation.navigate('Syllabus')}}/>
+                <ListItem title='Games & Sports' leading={<MaterialIcons name="sports-tennis" size={24} color="red" />} trailing={<MaterialIcons name="keyboard-arrow-right" size={24} color="black"/>} onPress={()=>{navigation.navigate('sports')}}/>
+                <ListItem title='Hostels' leading={<MaterialIcons name="meeting-room" size={24} color="blue" />} trailing={<MaterialIcons name="keyboard-arrow-right" size={24} color="black"/>}/>
+                <ListItem title='Health Center' leading={<FontAwesome name="plus" size={24} color="red" />} trailing={<MaterialIcons name="keyboard-arrow-right" size={24} color="black"/>}/>
             </View>
         </View>
     );

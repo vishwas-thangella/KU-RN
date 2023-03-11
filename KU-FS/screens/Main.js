@@ -22,6 +22,8 @@ import Engineering from "./Engineering";
 import Semesters from "./Semesters";
 import PHD from "./PHD";
 import Law from "./Law";
+import Placement from "./Placement";
+import Sports from "./Sports";
 
 const Main = () => {
   const Stack = createNativeStackNavigator();
@@ -75,6 +77,8 @@ const Main = () => {
         {Auth && <Stack.Screen name="semesters" component={Semesters}/>}
         {Auth && <Stack.Screen name="phd" component={PHD}/>}
         {Auth && <Stack.Screen name="law" component={Law}/>}
+        {Auth && <Stack.Screen name="placement" component={Placement}/>}
+        {Auth && <Stack.Screen name="sports" component={Sports}/>}
       </Stack.Navigator>
     </NavigationContainer>
   );
